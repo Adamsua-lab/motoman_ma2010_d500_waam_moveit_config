@@ -1,7 +1,7 @@
 <package>
 
   <name>motoman_ma2010_d500_waam_moveit_config</name>
-  <version>0.0.1</version>
+  <version>0.3.0</version>
   <description>
      An package containing all the configuration and launch files for using a
      wire-arc additive manufacturing setup comprised of a Motoman MA2010
@@ -30,8 +30,8 @@
   <run_depend>xacro</run_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
-  <build_depend>motoman_ma2010_motopos_d500_support</build_depend>
-  <run_depend>motoman_ma2010_motopos_d500_support</run_depend>
+  <build_depend>motoman_ma2010_d500_waam_support</build_depend>
+  <run_depend>motoman_ma2010_d500_waam_support</run_depend>
 
 
 </package>

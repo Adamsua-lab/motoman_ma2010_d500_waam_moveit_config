@@ -2,6 +2,8 @@
 
   <include file="$(find motoman_ma2010_d500_waam_moveit_config)/launch/planning_context.launch" />
 
+  <arg name="sim" />
+
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -48,6 +50,7 @@
     <arg name="moveit_manage_controllers" value="true" />
     <arg name="moveit_controller_manager" value="ma2010_d500" unless="$(arg fake_execution)"/>
     <arg name="moveit_controller_manager" value="fake" if="$(arg fake_execution)"/>
+    <arg name="sim" value="$(arg sim)" />
   </include>
 
   <!-- Sensors Functionality -->
