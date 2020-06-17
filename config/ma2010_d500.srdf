@@ -10,10 +10,10 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="arm">
-        <chain base_link="world" tip_link="ma2010_tool_tip_ang" />
+        <chain base_link="world" tip_link="ma2010_tcp" />
     </group>
     <group name="positioner">
-        <chain base_link="world" tip_link="d500_sub_plate" />
+        <chain base_link="world" tip_link="d500_fix_plate" />
     </group>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="d500_base_link" link2="d500_link_1" reason="Adjacent" />
@@ -22,19 +22,19 @@
     <disable_collisions link1="d500_base_link" link2="ma2010_link_1_s" reason="Never" />
     <disable_collisions link1="d500_base_link" link2="world" reason="Adjacent" />
     <disable_collisions link1="d500_link_1" link2="d500_link_2" reason="Adjacent" />
-    <disable_collisions link1="d500_link_1" link2="d500_sub_plate" reason="Never" />
+    <disable_collisions link1="d500_link_1" link2="d500_fix_plate" reason="Never" />
     <disable_collisions link1="d500_link_1" link2="ma2010_base_link" reason="Never" />
     <disable_collisions link1="d500_link_1" link2="ma2010_link_1_s" reason="Never" />
     <disable_collisions link1="d500_link_1" link2="ma2010_link_2_l" reason="Never" />
     <disable_collisions link1="d500_link_1" link2="world" reason="Never" />
-    <disable_collisions link1="d500_link_2" link2="d500_sub_plate" reason="Adjacent" />
+    <disable_collisions link1="d500_link_2" link2="d500_fix_plate" reason="Adjacent" />
     <disable_collisions link1="d500_link_2" link2="ma2010_base_link" reason="Never" />
     <disable_collisions link1="d500_link_2" link2="ma2010_link_1_s" reason="Never" />
     <disable_collisions link1="d500_link_2" link2="ma2010_link_2_l" reason="Never" />
     <disable_collisions link1="d500_link_2" link2="world" reason="Never" />
-    <disable_collisions link1="d500_sub_plate" link2="ma2010_base_link" reason="Never" />
-    <disable_collisions link1="d500_sub_plate" link2="ma2010_link_1_s" reason="Never" />
-    <disable_collisions link1="d500_sub_plate" link2="ma2010_link_2_l" reason="Never" />
+    <disable_collisions link1="d500_fix_plate" link2="ma2010_base_link" reason="Never" />
+    <disable_collisions link1="d500_fix_plate" link2="ma2010_link_1_s" reason="Never" />
+    <disable_collisions link1="d500_fix_plate" link2="ma2010_link_2_l" reason="Never" />
     <disable_collisions link1="ma2010_base_link" link2="ma2010_link_1_s" reason="Adjacent" />
     <disable_collisions link1="ma2010_base_link" link2="world" reason="Adjacent" />
     <disable_collisions link1="ma2010_link_1_s" link2="ma2010_link_2_l" reason="Adjacent" />
